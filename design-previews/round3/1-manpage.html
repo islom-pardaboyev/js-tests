@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 · Man Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3eee3;--ink:#1c1b18;--mute:#6f6a5e;--rule:#cfc7b4;--green:#1d6b47;--amber:#b4741a}
+*{box-sizing:border-box;margin:0}body{background:var(--paper);color:var(--ink);font:17px/1.6 Newsreader,serif}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.01em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.mh{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--rule);color:var(--mute)}
+h1{font:400 clamp(3.4rem,10vw,8rem)/.92 'Instrument Serif',serif;letter-spacing:-.02em;margin:72px 0 28px}
+h1 em{color:var(--green)}
+.sec{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--rule)}
+.sec h2{font:500 12.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--mute)}
+.lead{font-size:1.45rem;max-width:34ch;line-height:1.4}
+.cmd{display:inline-flex;gap:14px;align-items:center;margin-top:26px;background:var(--ink);color:var(--paper);padding:14px 20px;border-radius:2px}
+.cmd b{color:#9fd8b6;font-weight:500}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule)}
+.levels div{padding:22px;border-right:1px solid var(--rule)}.levels div:last-child{border:0}
+.levels h3{font:400 2rem 'Instrument Serif',serif}.levels p{color:var(--mute);font-size:.95rem}
+.q{border:1px solid var(--ink);background:#faf7ef;padding:30px;box-shadow:6px 6px 0 var(--rule)}
+.q .n{font:italic 400 4.5rem/1 'Instrument Serif',serif;color:var(--green)}
+pre{margin:18px 0;padding:16px;background:#ece6d6;border-left:3px solid var(--ink);font:14px/1.7 'JetBrains Mono',monospace}
+.opt{display:grid;grid-template-columns:34px 1fr;padding:12px 0;border-top:1px solid var(--rule);cursor:pointer}.opt:hover{background:#efe9d9}
+.opt.sel{background:#e4ecdc;box-shadow:inset 3px 0 var(--green)}
+.cert{border:1px solid var(--ink);padding:40px;background:#faf7ef;position:relative;outline:6px double var(--rule);outline-offset:-14px}
+.cert h3{font:italic 400 3.2rem/1 'Instrument Serif',serif}
+.cert dl{display:grid;grid-template-columns:130px 1fr;gap:6px 18px;margin-top:22px}.cert dt{color:var(--mute)}
+.stamp{position:absolute;right:40px;top:40px;width:96px;height:96px;border:2px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green);transform:rotate(-8deg);text-align:center;font:500 11px/1.3 'JetBrains Mono',monospace}
+@media(max-width:700px){.sec{grid-template-columns:1fr}.levels{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="mh mono"><span>JSTESTS(1)</span><span>General Commands Manual</span><span>JSTESTS(1)</span></div>
+<h1>Know your<br><em>JavaScript.</em></h1>
+<div class="sec" style="border:0;padding-top:0"><h2>NAME</h2><div><p class="lead">jstests — a proctored exam for developers. Sixty questions, one certificate anyone can verify.</p><div class="cmd mono"><b>$</b> jstests --begin <span style="opacity:.5">⏎</span></div></div></div>
+<div class="sec"><h2>DESCRIPTION</h2><div class="levels"><div><h3>Easy</h3><p>Choose A–D. Fifteen drawn from the bank.</p></div><div><h3>Medium</h3><p>Type the exact console output.</p></div><div><h3>Hard</h3><p>Write the function. Hidden tests decide.</p></div></div></div>
+<div class="sec"><h2>EXAMPLE</h2><div class="q"><div class="mono" style="color:var(--mute);display:flex;justify-content:space-between"><span>EASY · 07 / 15</span><span>00:24</span></div><div class="n">7.</div><p style="font-size:1.35rem">What does this print?</p><pre>console.log([] + [] === "");</pre>
+<div class="opt"><span class="mono">A</span><span class="mono">true</span></div><div class="opt sel"><span class="mono">B</span><span class="mono">false</span></div><div class="opt"><span class="mono">C</span><span class="mono">TypeError</span></div><div class="opt"><span class="mono">D</span><span class="mono">undefined</span></div></div></div>
+<div class="sec"><h2>CREDENTIAL</h2><div class="cert"><div class="stamp">VERIFIED<br>JST-4F2A<br>83%</div><div class="mono" style="color:var(--mute)">CERTIFICATE OF COMPETENCE</div><h3 style="margin-top:14px">Ada Lovelace</h3><p style="max-width:40ch;margin-top:10px">passed the JavaScript Fundamentals assessment.</p><dl class="mono"><dt>id</dt><dd>JST-4F2A-91C3-0B7E</dd><dt>score</dt><dd>83 / 100 · pass ≥ 70</dd><dt>issued</dt><dd>2026-10-27</dd><dt>verify</dt><dd>jstests.app/certificate/…</dd></dl></div></div>
+<div class="mh mono" style="margin-top:40px;border-top:1px solid var(--rule);border-bottom:0"><span>JSTests 1.0</span><span>October 2026</span><span>JSTESTS(1)</span></div></div></body></html>

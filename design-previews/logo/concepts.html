@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Logo concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}html,body{width:1400px}body{background:#faf9f5;font-family:'Bricolage Grotesque',sans-serif;color:#14161a;padding:44px 48px 48px}
+h1{font:800 34px 'Bricolage Grotesque';letter-spacing:-.03em;margin-bottom:6px}.sub{color:#5b6069;font-size:16px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e5e3dc;border-radius:18px;padding:22px;display:grid;gap:16px}
+.big{width:190px;height:190px;justify-self:center}.big svg{width:100%;height:100%}
+.name{font:800 22px 'Bricolage Grotesque';letter-spacing:-.02em}.name span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#14161a;color:#fff;font:700 14px 'JetBrains Mono';margin-right:8px;vertical-align:2px}
+.idea{color:#5b6069;font-size:14.5px;line-height:1.45;min-height:62px}
+.sizes{display:flex;align-items:flex-end;gap:14px;padding:14px;border-radius:12px;background:#f4f2ec}
+.sizes.dark{background:#0c0d10}.s64 svg{width:64px;height:64px}.s32 svg{width:32px;height:32px}.s16 svg{width:16px;height:16px}
+.lock{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;border:1px solid #e5e3dc}
+.lock svg{width:34px;height:34px}.lock b{font:800 20px 'Bricolage Grotesque';letter-spacing:-.035em}.lock b i{font-style:normal;color:#5b6069;font-weight:700}
+</style></head><body>
+<h1>Four logo ideas for JSTests</h1><p class="sub">Each shown large, at icon sizes (64, 32, 16 px) on light and dark, and next to the name.</p>
+<div class="grid" id="g"></div>
+<script>
+const TILE='<rect x="-47" y="-47" width="94" height="94" rx="26" fill="#14161a"/>';
+const PAL=['#17a58a','#12a0c8','#5b7dff','#9b7bff','#f0b45a'];
+const marks={
+A:()=>{let d='';const n=14;for(let i=0;i<n;i++){const a=-Math.PI/2+i/n*2*Math.PI,r=2.4+i*0.3;d+=`<circle cx="${(31*Math.cos(a)).toFixed(1)}" cy="${(31*Math.sin(a)).toFixed(1)}" r="${r.toFixed(1)}" fill="${PAL[i%5]}"/>`}
+ return TILE+d+'<g stroke="#f4f2ec" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M-3 -12Q-10 -12 -10 -5V-2Q-10 0 -15 0Q-10 0 -10 2V5Q-10 12 -3 12"/><path d="M3 -12Q10 -12 10 -5V-2Q10 0 15 0Q10 0 10 2V5Q10 12 3 12"/></g>'},
+B:()=>{let d='';const on=[[0,3],[1,4],[2,3],[3,2],[4,1]];for(let c=0;c<5;c++)for(let r=0;r<5;r++){const k=on.findIndex(p=>p[0]==c&&p[1]==r),x=-28+c*14,y=-28+r*14;d+=k>=0?`<circle cx="${x}" cy="${y}" r="6.4" fill="${PAL[k]}"/>`:`<circle cx="${x}" cy="${y}" r="1.9" fill="#3a3f4c"/>`}
+ return TILE+d},
+C:()=>TILE+'<path d="M10 -26V8Q10 26 -8 26Q-24 26 -27 10" stroke="#f4f2ec" stroke-width="11" stroke-linecap="round" fill="none"/><circle cx="-27" cy="-26" r="4" fill="#17a58a"/><circle cx="-14" cy="-26" r="5.6" fill="#f0b45a"/><circle cx="-1" cy="-26" r="7.4" fill="#5b7dff"/>',
+D:()=>TILE+'<path d="M-24 -20L-3 0L-24 20" stroke="#f4f2ec" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="6" y="12" width="26" height="9" rx="4.5" fill="#f0b45a"/><circle cx="26" cy="-14" r="4.5" fill="#17a58a"/><circle cx="14" cy="-14" r="3" fill="#5b7dff"/>'
+};
+const info={A:['Dot Seal','A ring of dots that grows around a pair of braces, like the seal on a certificate. Progress, code and the site\'s dot pattern in one mark.'],
+B:['Pixel Check','A check mark drawn as a dot matrix, with five colours running along it. It reads as "passed" and as the site\'s signature dots.'],
+C:['Stair J','A bold J whose crown is three dots growing larger, one per level. The first letter of JavaScript and a sense of climbing.'],
+D:['Prompt','A terminal prompt with a cursor, and dots that rise beside it. It says "code" at once and stays simple at 16 px.']};
+const svg=k=>`<svg viewBox="-50 -50 100 100">${marks[k]()}</svg>`;
+document.getElementById('g').innerHTML=Object.keys(marks).map(k=>`<div class="card"><div class="big">${svg(k)}</div><div class="name"><span>${k}</span>${info[k][0]}</div><p class="idea">${info[k][1]}</p>
+<div class="sizes"><div class="s64">${svg(k)}</div><div class="s32">${svg(k)}</div><div class="s16">${svg(k)}</div></div>
+<div class="sizes dark"><div class="s64">${svg(k)}</div><div class="s32">${svg(k)}</div><div class="s16">${svg(k)}</div></div>
+<div class="lock">${svg(k)}<b>JS<i>Tests</i></b></div></div>`).join('');
+</script></body></html>

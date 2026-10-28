@@ -1,0 +1,15 @@
+// Writes public/logo.svg and public/favicon.svg: a terminal prompt with a cursor, and dots that rise beside it.
+import { writeFileSync } from 'node:fs';
+
+const svg = (size) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" width="${size}" height="${size}" fill="none">
+  <title>JSTests</title>
+  <rect x="-47" y="-47" width="94" height="94" rx="26" fill="#14161a"/>
+  <path d="M-24 -20L-3 0L-24 20" stroke="#f4f2ec" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6" y="12" width="26" height="9" rx="4.5" fill="#f0b45a"/>
+  <circle cx="14" cy="-14" r="3" fill="#5b7dff"/>
+  <circle cx="26" cy="-14" r="4.5" fill="#17a58a"/>
+</svg>
+`;
+writeFileSync('public/logo.svg', svg(256));
+writeFileSync('public/favicon.svg', svg(64));
+console.log('logo + favicon written');

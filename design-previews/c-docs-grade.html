@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>C · Docs-grade light</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fbfaf7;color:#16161a;font:16px/1.7 Onest,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 40px}
+nav{height:72px;display:flex;align-items:center;gap:32px;border-bottom:1px solid #e8e5dd}.logo{font:600 21px Newsreader,serif;letter-spacing:-.02em;display:flex;gap:10px;align-items:center}.logo i{font:500 12px JetBrains Mono;font-style:normal;border:1px solid #16161a;border-radius:7px;padding:3px 6px}
+nav a{color:#5d5d66;font-size:14px;font-weight:500}nav .r{margin-left:auto}
+.btn{height:44px;padding:0 20px;border-radius:10px;font:500 15px Onest;display:inline-flex;align-items:center;border:1px solid #d9d5c9;background:#fff;color:#16161a}.btn.p{background:#2a3bff;color:#fff;border-color:#2a3bff}
+.hero{padding:112px 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+h1{font:500 78px/.98 Newsreader,serif;letter-spacing:-.035em;margin:0 0 26px}h1 i{color:#2a3bff}
+.sub{color:#5d5d66;font-size:19px;max-width:480px;margin:0 0 34px}
+.code{background:#f1efe8;border:1px solid #e2dfd4;border-radius:14px;padding:22px 26px;font:400 14px/1.9 JetBrains Mono;color:#2b2b33}.k{color:#2a3bff}.s{color:#0a8f6a}.n{color:#b45309}.c{color:#9a978c}
+.sec{border-top:1px solid #e8e5dd;padding:72px 0 88px;display:grid;grid-template-columns:200px 1fr;gap:48px}
+.rail{font:500 12px JetBrains Mono;color:#9a978c;line-height:2}.rail b{color:#16161a;font-weight:500}
+.q{max-width:680px}.q h2{font:500 36px/1.1 Newsreader,serif;letter-spacing:-.02em;margin:0 0 24px}
+.opt{display:flex;gap:16px;align-items:center;height:58px;padding:0 20px;border:1px solid #e2dfd4;border-radius:12px;margin-bottom:10px;background:#fff;font:500 14px JetBrains Mono}.opt i{font-style:normal;color:#9a978c;border:1px solid #e2dfd4;border-radius:6px;width:26px;height:26px;display:grid;place-items:center;font-size:12px}
+.opt.ok{border-color:#0a8f6a;background:#ecf8f3}.opt.no{border-color:#d6452a;background:#fdf1ee}.dim{opacity:.5}
+.note{margin-top:20px;padding:18px 22px;border:1px solid #e2dfd4;border-radius:12px;background:#fff;color:#4a4a52}.note b{color:#d6452a}
+.top{display:flex;justify-content:space-between;font:500 13px JetBrains Mono;color:#7a776c;margin-bottom:20px}
+</style></head><body>
+<div class="wrap"><nav><div class="logo"><i>{✓}</i>JSTests</div><a>Tests</a><a>Verify certificate</a><div class="r"><span class="btn">Sign in</span></div></nav>
+<section class="hero"><div><h1>Prove your <i>JavaScript.</i></h1><p class="sub">Predict what code prints, write functions in a live editor, and finish with a certificate anyone can verify by QR code.</p><span class="btn p">Start free</span> <span class="btn">Verify a certificate</span></div>
+<div class="code"><span class="c">// can you predict this?</span><br><span class="k">const</span> arr = [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>];<br>arr.push(<span class="n">4</span>);<br>console.log(arr.length); <span class="c">// ?</span></div></section>
+<section class="sec"><div class="rail"><b>Easy</b><br>Question 3 of 10<br>24:31 left<br>0 / 3 strikes</div><div class="q"><div class="top"><span>EASY · CHOOSE A, B, C OR D</span><span></span></div>
+<h2>What is arr.length?</h2><div class="code" style="margin-bottom:22px"><span class="k">const</span> arr = [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>];<br>arr.push(<span class="n">4</span>);<br>console.log(arr.length);</div>
+<div class="opt dim"><i>A</i>3</div><div class="opt ok"><i>B</i>4</div><div class="opt no"><i>C</i>TypeError</div><div class="opt dim"><i>D</i>undefined</div>
+<div class="note"><b>Incorrect.</b> const forbids reassigning the variable, not mutating the array it points to. push works and the length is 4.</div></div></section></div></body></html>

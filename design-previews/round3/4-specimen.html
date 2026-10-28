@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4 · Specimen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0b;--paper:#fff;--o:#ff4f12;--line:#0b0b0b}
+*{box-sizing:border-box;margin:0}body{background:var(--paper);color:var(--ink);font:16px/1.5 'Inter Tight',sans-serif;
+background-image:linear-gradient(90deg,#0b0b0b0d 1px,transparent 1px);background-size:calc(100%/12) 100%}
+.m{font:500 11.5px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.top{display:flex;justify-content:space-between;padding:18px 0;border-bottom:2px solid var(--line)}
+h1{font:800 clamp(4rem,17vw,14rem)/.8 'Inter Tight';letter-spacing:-.065em;margin:40px 0 20px}
+h1 sup{font:500 .12em 'JetBrains Mono';color:var(--o);letter-spacing:0;vertical-align:top}
+.cols{display:grid;grid-template-columns:repeat(12,1fr);gap:0;border-top:2px solid var(--line)}
+.cols>div{padding:22px 14px 22px 0}.s4{grid-column:span 4}.s6{grid-column:span 6}.s8{grid-column:span 8}
+.big{font:800 7rem/.9 'Inter Tight';letter-spacing:-.06em}.o{color:var(--o)}
+.q{border-top:2px solid var(--line);margin-top:70px;display:grid;grid-template-columns:2fr 3fr;gap:30px;padding-top:20px}
+.q .n{font:800 clamp(8rem,22vw,18rem)/.75 'Inter Tight';letter-spacing:-.08em}
+pre{border:2px solid var(--line);padding:14px;margin:16px 0;font:14px/1.7 'JetBrains Mono';background:#fff}
+.opt{display:grid;grid-template-columns:48px 1fr;border-top:1px solid var(--line);padding:14px 0;cursor:pointer;font-size:1.15rem}.opt:last-child{border-bottom:1px solid var(--line)}
+.opt:hover{background:#f4f4f4}.opt.sel{background:var(--o);color:#fff}.opt.sel .m{color:#fff}
+.cert{border:2px solid var(--line);margin-top:70px;display:grid;grid-template-columns:1fr 260px}
+.cert>div{padding:30px}.cert h3{font:800 clamp(2.6rem,6vw,5rem)/.9 'Inter Tight';letter-spacing:-.05em}
+.side{background:var(--ink);color:#fff;border-left:2px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+@media(max-width:760px){.q,.cert{grid-template-columns:1fr}.s4,.s6,.s8{grid-column:span 12}}
+</style></head><body><div class="wrap">
+<div class="top m"><span>JSTests ®</span><span>JavaScript assessment</span><span>Index 001 / 2026</span></div>
+<h1>Test<sup>60 Qs</sup><br><span class="o">JS.</span></h1>
+<div class="cols"><div class="s4"><div class="m">01 · Easy</div><div class="big">15</div><p>choose A–D</p></div><div class="s4"><div class="m">02 · Medium</div><div class="big">15</div><p>type the exact output</p></div><div class="s4"><div class="m">03 · Hard</div><div class="big o">15</div><p>write the function</p></div></div>
+<div class="q"><div><div class="m">Easy · 15 total</div><div class="n o">07</div></div><div><div class="m" style="display:flex;justify-content:space-between"><span>What does this print?</span><span>00:24</span></div><pre>console.log([] + [] === "");</pre><div class="opt"><span class="m">A</span>true</div><div class="opt sel"><span class="m">B</span>false</div><div class="opt"><span class="m">C</span>TypeError</div><div class="opt"><span class="m">D</span>undefined</div></div></div>
+<div class="cert"><div><div class="m">Certificate · JST-4F2A-91C3-0B7E</div><h3 style="margin:22px 0">Ada<br>Lovelace</h3><p style="max-width:34ch">Passed the JavaScript Fundamentals assessment on 27 October 2026.</p></div><div class="side"><div class="m">Score</div><div style="font:800 7rem/.8 'Inter Tight';letter-spacing:-.06em">83</div><div class="m">Pass ≥ 70 · Verify by QR</div></div></div>
+<p style="height:90px"></p></div></body></html>

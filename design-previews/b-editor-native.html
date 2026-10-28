@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>B · Editor-native</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#16161e;color:#c0caf5;font:15px/1.6 "IBM Plex Sans",sans-serif;-webkit-font-smoothing:antialiased}
+.m{font-family:"JetBrains Mono",monospace}
+.top{height:44px;background:#16161e;border-bottom:1px solid #232433;display:flex;align-items:center;gap:20px;padding:0 18px;font:500 12px "JetBrains Mono";color:#565f89}.top b{color:#7aa2f7}
+.hero{padding:88px 0 64px;max-width:1040px;margin:0 auto;padding-left:40px;padding-right:40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+h1{font:700 60px/1.04 "JetBrains Mono";letter-spacing:-.05em;margin:0 0 22px;color:#e6e9ff}h1 em{font-style:normal;color:#7aa2f7}
+.sub{color:#8089b3;font-size:17px;max-width:460px;margin:0 0 28px}
+.btn{font:600 14px "JetBrains Mono";height:44px;padding:0 20px;border-radius:8px;display:inline-flex;align-items:center;background:#7aa2f7;color:#16161e;margin-right:10px}.btn.g{background:transparent;color:#c0caf5;border:1px solid #2f3147}
+.term{background:#1a1b26;border:1px solid #2a2c3f;border-radius:12px;font:400 13px/1.9 "JetBrains Mono";padding:18px 22px;color:#9aa5ce}.term .p{color:#9ece6a}.term .ok{color:#9ece6a}.term .d{color:#565f89}
+.ide{max-width:1180px;margin:0 auto 60px;border:1px solid #2a2c3f;border-radius:12px;overflow:hidden;background:#1a1b26;display:grid;grid-template-columns:230px 1fr}
+.side{background:#16161e;border-right:1px solid #232433;padding:14px 0;font:400 13px "JetBrains Mono";color:#7d86ab}
+.side h6{margin:0 0 8px;padding:0 16px;font:700 11px "JetBrains Mono";letter-spacing:.08em;color:#565f89}.side div{padding:5px 16px;display:flex;gap:10px}.side .on{background:#202233;color:#c0caf5}.side .ok{color:#9ece6a}.side .bad{color:#ff9e64}
+.main{display:flex;flex-direction:column}.tabs{display:flex;background:#16161e;border-bottom:1px solid #232433;font:400 13px "JetBrains Mono"}.tabs div{padding:11px 18px;color:#565f89;border-right:1px solid #232433}.tabs .on{background:#1a1b26;color:#c0caf5;box-shadow:inset 0 1px #7aa2f7}
+.body{padding:32px 44px 36px}.cm{font:400 14px/1.9 "JetBrains Mono";color:#565f89}.cm b{color:#bb9af7;font-weight:400}
+pre{margin:14px 0 24px;font:400 14px/1.9 "JetBrains Mono";color:#c0caf5;background:#16161e;border:1px solid #232433;border-radius:8px;padding:16px 20px}.k{color:#bb9af7}.n{color:#ff9e64}.f{color:#7aa2f7}.s{color:#9ece6a}
+.opt{display:grid;grid-template-columns:32px 1fr;font:400 14px "JetBrains Mono";padding:12px 16px;border:1px solid #2a2c3f;border-radius:8px;margin-bottom:8px;color:#a9b1d6}.opt i{font-style:normal;color:#565f89}
+.opt.ok{border-color:#9ece6a;background:rgba(158,206,106,.08);color:#d7f0b8}.opt.no{border-color:#ff9e64;background:rgba(255,158,100,.08);color:#ffd0b0}.dim{opacity:.5}
+.note{margin-top:16px;font:400 13px/1.8 "JetBrains Mono";color:#8089b3;border-left:0;padding:14px 16px;background:#16161e;border-radius:8px}.note b{color:#ff9e64;font-weight:500}
+.status{display:flex;gap:22px;padding:0 16px;height:30px;align-items:center;background:#7aa2f7;color:#16161e;font:500 12px "JetBrains Mono"}.status .r{margin-left:auto;display:flex;gap:22px}
+</style></head><body>
+<div class="top"><b>{✓} JSTests</b><span>tests</span><span>verify</span><span style="margin-left:auto">islom@jstests</span></div>
+<section class="hero"><div><h1>Prove your<br><em>JavaScript.</em></h1><p class="sub">Predict real code, write real functions, and earn a certificate with a QR code anyone can verify.</p><span class="btn">start --free</span><span class="btn g">verify cert</span></div>
+<div class="term"><div><span class="p">$</span> jstests start --level hard</div><div class="d">drawing 15 items… timer 00:45:00</div><div>&gt; flatten.js</div><div class="ok">✓ flattens nested arrays</div><div class="ok">✓ returns [] for empty input</div><div class="ok">✓ keeps non-numeric values</div><div><span class="ok">3 passed</span> <span class="d">· 0 failed · 0.04s</span></div></div></section>
+<div class="ide"><div class="side"><h6>EXAM · EASY</h6><div class="ok">✓ q01.js</div><div class="ok">✓ q02.js</div><div class="on">● q03.js</div><div>○ q04.js</div><div>○ q05.js</div><div>○ q06.js</div><h6 style="margin-top:14px">MEDIUM</h6><div>○ m01.js</div><div>○ m02.js</div></div>
+<div class="main"><div class="tabs"><div>q02.js</div><div class="on">q03.js</div></div>
+<div class="body"><div class="cm"><b>/**</b><br>&nbsp;* What is arr.length?<br>&nbsp;<b>*/</b></div><pre><span class="k">const</span> arr = [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>];
+arr.<span class="f">push</span>(<span class="n">4</span>);
+console.<span class="f">log</span>(arr.length);</pre>
+<div class="opt dim"><i>A</i>3</div><div class="opt ok"><i>B</i>4</div><div class="opt no"><i>C</i>TypeError</div><div class="opt dim"><i>D</i>undefined</div>
+<div class="note"><b>// incorrect.</b> const forbids reassigning the variable, not mutating the array. push works and the length is 4.</div></div>
+<div class="status"><span>⏱ 24:31</span><span>⚠ 0/3 strikes</span><span class="r"><span>Ln 3, Col 1</span><span>JavaScript</span><span>3 / 10</span></span></div></div></div></body></html>

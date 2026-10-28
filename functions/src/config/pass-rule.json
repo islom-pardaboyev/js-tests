@@ -1,0 +1,5 @@
+{
+  "overall": 0.7,
+  "perLevel": 0.5,
+  "_comment": "A pass needs the overall score at or above `overall` AND each level that the test uses at or above `perLevel`. Tradeoff: a per-level floor stops a strong easy/medium score from hiding a zero on hard coding, so a certificate means the candidate can write code, not only pick answers. The cost is that a candidate who is strong overall but weak in one level fails; raise or lower perLevel here, never in code. Mirrored to the browser by importing this file, so there is one source."
+}

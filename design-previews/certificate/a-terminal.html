@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}body{background:#0a0c10;display:grid;place-items:center;min-height:100vh;padding:32px;font-family:'Bricolage Grotesque',sans-serif;color:#eeeee9}
+.c{width:1040px;border:1px solid #262b36;border-radius:20px;background:#0f1218;overflow:hidden}
+.bar{display:flex;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid #1f2430;font:500 12px 'JetBrains Mono';color:#7c8497}
+.bar i{width:10px;height:10px;border-radius:50%;background:#2a2f3c}.bar .ok{margin-left:auto;color:#3fd1b4;display:flex;gap:6px;align-items:center}
+.body{display:grid;grid-template-columns:1fr 250px;gap:48px;padding:48px 48px 36px}
+.mono{font:400 14px/2 'JetBrains Mono';color:#9aa1b5;white-space:pre}
+.k{color:#8fa6ff}.s{color:#7ee2b8}.n{color:#f0b45a}.d{color:#4a5163}
+h1{font:800 76px/1 'Bricolage Grotesque';letter-spacing:-.035em;margin:18px 0 22px}
+.diff{margin-top:22px;border:1px solid #1f2430;border-radius:12px;background:#0b0e13;padding:16px 20px;font:400 14px/2 'JetBrains Mono'}
+.diff div{display:grid;grid-template-columns:22px 92px 1fr 70px;align-items:center;gap:6px;color:#cdd3e3}
+.diff .p{color:#3fd1b4}.diff .l{color:#7c8497}
+.track{height:7px;border-radius:4px;background:#1e2230;overflow:hidden}.track b{display:block;height:100%;border-radius:4px}
+.side{display:grid;gap:14px;justify-items:center;align-content:start}.skin{width:230px;height:230px}
+.pct{font:700 52px 'JetBrains Mono';letter-spacing:-.04em}.pct small{font-size:16px;color:#7c8497;letter-spacing:0}
+.foot{display:flex;gap:22px;align-items:center;padding:24px 48px;border-top:1px solid #1f2430;background:#0b0e13}
+.qr{width:92px;height:92px;border-radius:10px;overflow:hidden;flex:none}
+.foot p{font:400 13px 'JetBrains Mono';color:#7c8497}.foot b{display:block;font:700 16px 'Bricolage Grotesque';color:#eeeee9;margin-bottom:4px}
+.mk{width:34px;height:34px;color:#eeeee9;margin-right:2px}
+</style></head><body>
+<article class="c">
+ <div class="bar"><i></i><i></i><i></i><span style="width:6px"></span><span>certificate.json</span><span class="ok">✓ verified credential</span></div>
+ <div class="body">
+  <div>
+   <div class="mono"><span class="d">1  </span><span class="k">const</span> holder <span class="k">=</span></div>
+   <h1>[Your Name]</h1>
+   <div class="mono" style="font-size:15px"><span class="d">3  </span><span class="k">await</span> exam.<span class="s">pass</span>(<span class="s">"JavaScript Assessment"</span>);<br><span class="d">4  </span><span class="d">// issued 27 Oct 2026, pass mark 70%</span></div>
+   <div class="diff">
+    <div><span class="p">+</span><span class="l">easy</span><span class="track"><b style="width:90%;background:#3fd1b4"></b></span><span style="text-align:right">9/10</span></div>
+    <div><span class="p">+</span><span class="l">medium</span><span class="track"><b style="width:80%;background:#f0b45a"></b></span><span style="text-align:right">8/10</span></div>
+    <div><span class="p">+</span><span class="l">hard</span><span class="track"><b style="width:75%;background:#6f8dff"></b></span><span style="text-align:right">3/4</span></div>
+   </div>
+  </div>
+  <div class="side"><div class="skin" id="sk"></div><div class="pct">83<small>%</small></div></div>
+ </div>
+ <div class="foot"><div class="qr" id="qr"></div><div><b>Verify this certificate</b><p>jstests verify JST-ABCD-EFGH-2345</p></div><div class="mk" style="margin-left:auto;width:44px;height:44px" id="mk"></div></div>
+</article>
+<script src="shared.js"></script><script>skin(sk,12);qr(qr_=document.getElementById('qr'),'#0f1218');document.getElementById('mk').innerHTML=MARK</script>
+</body></html>

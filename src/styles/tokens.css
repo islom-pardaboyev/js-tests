@@ -1,0 +1,108 @@
+/* Direction: Type-only statement. Near-black ground, warm off-white ink and one
+   lime field that carries the action and every selected state. Surfaces step in
+   tone, never in shadows. League Spartan 800 for display, Figtree for text,
+   JetBrains Mono only inside code. See DESIGN.md. */
+/* Light: warm paper, the same lime field, ink buttons. */
+:root[data-theme='light'] {
+  --bg: #ecebe4;
+  --bg-2: #e3e2da;
+  --surface: #dad9d0;
+  --surface-2: #d0cfc5;
+  --surface-3: #c5c4b9;
+  --line: #cfcdc2;
+  --line-strong: #b3b1a4;
+  --text: #15150f;
+  --muted: #55544a;
+  --faint: #77756a;
+
+  --primary: #15150f;
+  --primary-hover: #2e2d22;
+  --on-primary: #d5ff3f;
+  --accent: #15150f;
+  --accent-soft: #15150f;
+  --accent-text: #3f5200;
+  --accent-wash: rgba(21, 21, 15, 0.08);
+  --lime: #d5ff3f;
+  --on-lime: #15150f;
+
+  --mint: #0f7a5f;
+  --coral: #b83a22;
+  --amber: #8a5a08;
+  --good: #0f7a5f;
+  --bad: #b83a22;
+  --warn: #8a5a08;
+
+  --code-bg: #e3e2da;
+  --tok-kw: #3f5200;
+  --tok-str: #0f7a5f;
+  --tok-num: #8a5a08;
+  --tok-lit: #0a7183;
+  --tok-fn: #8a3b12;
+  --tok-com: #77756a;
+
+  --shadow: none;
+  --glow: transparent;
+
+  --dot-1: #1b8f7a;
+  --dot-2: #3f5200;
+  --dot-3: #b7791f;
+  --dot-4: #b5532f;
+  --dot-5: #1f8fb0;
+}
+
+:root,
+:root[data-theme='dark'] {
+  --bg: #15150f;
+  --bg-2: #1b1b14;
+  --surface: #201f18;
+  --surface-2: #2a291f;
+  --surface-3: #35342a;
+  --line: #2e2d24;
+  --line-strong: #46453a;
+  --text: #f1efe6;
+  --muted: #a8a597;
+  --faint: #77756a;
+
+  --primary: #d5ff3f;
+  --primary-hover: #e4ff7d;
+  --on-primary: #15150f;
+  --accent: #d5ff3f;
+  --accent-soft: #d5ff3f;
+  --accent-text: #d5ff3f;
+  --accent-wash: rgba(213, 255, 63, 0.12);
+  --lime: #d5ff3f;
+  --on-lime: #15150f;
+
+  --mint: #4cc9a6;
+  --coral: #ff8f72;
+  --amber: #f0b45a;
+  --good: #4cc9a6;
+  --bad: #ff8f72;
+  --warn: #f0b45a;
+
+  --code-bg: #101009;
+  --tok-kw: #d5ff3f;
+  --tok-str: #4cc9a6;
+  --tok-num: #f0b45a;
+  --tok-lit: #5fd0e0;
+  --tok-fn: #f0a070;
+  --tok-com: #77756a;
+
+  --shadow: none;
+  --glow: transparent;
+
+  --dot-1: #4cc9a6;
+  --dot-2: #d5ff3f;
+  --dot-3: #f0b45a;
+  --dot-4: #f0a070;
+  --dot-5: #5fd0e0;
+}
+
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 8px;
+  --radius-sm: 6px;
+  --font-display: 'League Spartan', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}

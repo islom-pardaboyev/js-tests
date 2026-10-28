@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · Hard Shadow</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6d8;--ink:#101010;--blue:#3d5cff;--green:#27e0a0;--yellow:#ffd33d;--orange:#ff8a3d}
+*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--ink);font:17px/1.5 'Space Grotesk',sans-serif}
+.m{font-family:'Space Mono',monospace;font-size:13px}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.box{border:2.5px solid var(--ink);background:#fff;box-shadow:7px 7px 0 var(--ink);border-radius:6px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.btn{display:inline-block;border:2.5px solid var(--ink);background:var(--yellow);padding:12px 22px;font-weight:700;box-shadow:5px 5px 0 var(--ink);border-radius:6px;transition:.12s;cursor:pointer}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+h1{font:700 clamp(3.2rem,10vw,8rem)/.92 'Space Grotesk';letter-spacing:-.045em;margin:50px 0 24px}
+h1 span{background:var(--green);padding:0 .12em;border:2.5px solid var(--ink);display:inline-block;transform:rotate(-1.5deg);box-shadow:6px 6px 0 var(--ink)}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:46px 0}.row .box{padding:22px}
+h2{font:700 2.2rem 'Space Grotesk';letter-spacing:-.03em;margin:70px 0 22px}
+pre{background:var(--ink);color:var(--green);padding:16px;margin:16px 0;font:14px/1.7 'Space Mono';border-radius:4px}
+.opt{display:flex;gap:14px;border:2.5px solid var(--ink);padding:13px 16px;margin:12px 0;background:#fff;border-radius:6px;cursor:pointer;transition:.1s}
+.opt:hover{background:#eef2ff}.opt.sel{background:var(--blue);color:#fff;box-shadow:5px 5px 0 var(--ink);transform:translate(-2px,-2px)}
+.bar{height:20px;border:2.5px solid var(--ink);background:#fff;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:46%;background:var(--orange);border-right:2.5px solid var(--ink)}
+.cert{background:var(--blue);color:#fff;padding:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.cert h3{font:700 3.2rem/1 'Space Grotesk';letter-spacing:-.04em}
+.badge{width:150px;height:150px;border-radius:50%;background:var(--yellow);color:var(--ink);border:2.5px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:grid;place-items:center;text-align:center;font:700 2.6rem/1 'Space Grotesk';transform:rotate(8deg)}
+.badge small{display:block;font:700 12px 'Space Mono'}
+@media(max-width:760px){.row,.cert{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<nav><b style="font-size:1.4rem">jstests<span style="color:var(--blue)">.</span></b><span class="btn">Sign in</span></nav>
+<h1>Prove it. <span>In JS.</span></h1><p style="font-size:1.3rem;max-width:40ch">Sixty questions. Real code. A certificate with a QR that anyone can check in a second.</p><p style="margin-top:26px"><span class="btn" style="background:var(--green)">Start the exam →</span></p>
+<div class="row"><div class="box"><div class="m">LEVEL 1</div><b style="font-size:1.6rem">Easy</b><p>Pick A, B, C or D.</p></div><div class="box" style="background:var(--yellow)"><div class="m">LEVEL 2</div><b style="font-size:1.6rem">Medium</b><p>Type what prints.</p></div><div class="box" style="background:var(--green)"><div class="m">LEVEL 3</div><b style="font-size:1.6rem">Hard</b><p>Write the function.</p></div></div>
+<h2>Mid-exam</h2><div class="box" style="padding:28px"><div style="display:flex;justify-content:space-between;margin-bottom:12px" class="m"><span>Q7 / 15</span><span>⏱ 00:24</span></div><div class="bar"><i></i></div><b style="font-size:1.5rem;display:block;margin-top:20px">What does this print?</b><pre>console.log([] + [] === "");</pre><div class="opt"><b class="m">A</b>true</div><div class="opt sel"><b class="m">B</b>false</div><div class="opt"><b class="m">C</b>TypeError</div><div class="opt"><b class="m">D</b>undefined</div></div>
+<h2>You passed</h2><div class="box cert"><div><div class="m">CERTIFICATE · JST-4F2A-91C3</div><h3 style="margin:12px 0">Ada Lovelace</h3><p>JavaScript Fundamentals · verified by QR</p></div><div class="badge"><div>83<small>/100 PASS</small></div></div></div>
+<p style="height:80px"></p></div></body></html>

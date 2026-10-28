@@ -1,0 +1,87 @@
+html { color-scheme: dark; scrollbar-color: var(--line-strong) transparent; }
+:root[data-theme='light'] { color-scheme: light; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 { font-family: var(--font-display); margin: 0; text-wrap: balance; }
+h1 { font-size: 2.5rem; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+h2 { font-size: 1.75rem; font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; }
+h3 { font-size: 1.125rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+p { margin: 0; }
+code, pre, textarea.code { font-family: var(--font-mono); font-variant-ligatures: none; font-feature-settings: 'liga' 0, 'calt' 0; }
+.option, .out-body { font-variant-ligatures: none; font-feature-settings: 'liga' 0, 'calt' 0; }
+.display { font-weight: 700; letter-spacing: -0.035em; }
+
+::selection { background: color-mix(in srgb, var(--accent) 38%, transparent); color: var(--text); }
+textarea, input { caret-color: var(--accent-soft); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 10px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-track { background: transparent; }
+
+a { color: var(--accent-text); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; border-radius: 6px; }
+
+.app-bg { position: relative; min-height: 100dvh; isolation: isolate; }
+
+/* Spacing system: every page wrapper gets the same generous rhythm. */
+:root {
+  --gutter: clamp(24px, 4vw, 56px);
+  --pad-page: clamp(56px, 7vw, 104px);
+  --pad-hero-top: clamp(80px, 10vw, 144px);
+  --pad-hero-bottom: clamp(48px, 6vw, 80px);
+}
+.container { width: 100%; max-width: 1440px; margin-left: auto; margin-right: auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.container[class*='py-'] { padding-top: var(--pad-page); padding-bottom: var(--pad-page); }
+.container.hero { padding-top: var(--pad-hero-top); padding-bottom: var(--pad-hero-bottom); }
+
+.muted { color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.grid > *, .flex > * { min-width: 0; }
+.mono-note { font-family: var(--font-body); font-size: 0.8125rem; color: var(--faint); }
+.meta { font: 600 0.8125rem var(--font-body); color: var(--muted); }
+
+/* Keycaps: A to D on answers, hints in the footer. */
+.kbd { display: inline-grid; place-items: center; min-width: 26px; height: 24px; padding: 0 7px; border-radius: var(--radius-sm); background: var(--surface-2); color: var(--muted); font: 600 0.8125rem var(--font-body); }
+
+/* Entrances that cannot get stuck (pure CSS). */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes pop { 40% { transform: scale(1.01); } }
+.rise { animation: rise 600ms var(--ease-out) backwards; animation-delay: calc(var(--i, 0) * 70ms); }
+.js-reveal .reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); }
+.js-reveal .reveal.in { opacity: 1; transform: none; }
+
+/* Exam mode: nothing selectable except the editor and typed answers; nothing printable. */
+body.exam-locked { user-select: none; -webkit-user-select: none; }
+body.exam-locked .editor, body.exam-locked .editor textarea, body.exam-locked input { user-select: text; -webkit-user-select: text; }
+@media print { body.exam-locked { display: none !important; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Scroll animation (driven by --sy / --sp from useScrollFx) ---------- */
+.scroll-bar { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; transform-origin: left; transform: scaleX(var(--sp, 0)); background: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .scroll-bar { display: none; } }
+/* Components arriving on scroll (see useScrollReveal) */
+.sr-on [data-sr]:not(.sr-in) { opacity: 0; transform: translate3d(0, 28px, 0) scale(0.985); filter: blur(5px); }
+.sr-on [data-sr] { transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out), filter 800ms var(--ease-out); transition-delay: var(--sr-d, 0ms); }
+.sr-on [data-sr].sr-in { opacity: 1; transform: none; filter: none; }
+/* Reduced motion keeps the arrival as a plain fade: no travel, no blur. */
+@keyframes fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: fade 700ms ease-out backwards !important; animation-delay: calc(var(--i, 0) * 90ms) !important; }
+  .js-reveal .reveal, .js-reveal .reveal.in { transform: none !important; transition: opacity 700ms ease-out !important; }
+  .sr-on [data-sr]:not(.sr-in) { opacity: 0 !important; transform: none !important; filter: none !important; }
+  .sr-on [data-sr] { transition: opacity 700ms ease-out !important; transition-delay: var(--sr-d, 0ms) !important; }
+}

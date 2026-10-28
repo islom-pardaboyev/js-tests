@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}html,body{width:1200px;height:630px;overflow:hidden}
+body{background:#faf9f5;font-family:'Bricolage Grotesque',sans-serif;color:#14161a;position:relative}
+#dots{position:absolute;right:0;top:0;width:520px;height:630px}
+.fade{position:absolute;right:0;top:0;width:620px;height:630px;background:linear-gradient(90deg,#faf9f5 0,rgba(250,249,245,0) 45%)}
+.brand{position:absolute;left:84px;top:78px;display:flex;align-items:center;gap:16px;font:800 38px 'Bricolage Grotesque';letter-spacing:-.035em}
+.brand svg{width:60px;height:60px}.brand b{font-weight:800}.brand span{color:#5b6069;font-weight:700}
+h1{position:absolute;left:80px;top:196px;font:800 124px/0.98 'Bricolage Grotesque';letter-spacing:-.04em}
+p{position:absolute;left:86px;top:494px;width:700px;font:500 30px/1.4 'Bricolage Grotesque';color:#5b6069}
+.tag{position:absolute;left:86px;bottom:44px;font:500 20px 'JetBrains Mono';color:#868b94}
+</style></head><body>
+<svg id="dots" viewBox="0 0 520 630"></svg><div class="fade"></div>
+<div class="brand"><svg viewBox="-50 -50 100 100" fill="none"><rect x="-47" y="-47" width="94" height="94" rx="26" fill="#14161a"/><path d="M-24 -20L-3 0L-24 20" stroke="#f4f2ec" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="12" width="26" height="9" rx="4.5" fill="#f0b45a"/><circle cx="14" cy="-14" r="3" fill="#5b7dff"/><circle cx="26" cy="-14" r="4.5" fill="#17a58a"/></svg><b>JS<span>Tests</span></b></div>
+<h1>Prove your<br>JavaScript.</h1>
+<p>Predict code. Write functions.<br>Earn a certificate anyone can verify.</p>
+<script>
+const C=['#17a58a','#2d5bff','#c27a10','#7a5cff','#12a0c8'];let h=2166136261;for(const c of 'JSTESTS-OG')h=Math.imul(h^c.charCodeAt(0),16777619);let s=h>>>0;const r=()=>(s=(Math.imul(s,1664525)+1013904223)>>>0)/4294967296;
+let o='';const cols=13,rows=16,st=40;for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const a=r(),b=r(),grow=0.25+0.75*(i/cols);o+=`<circle cx="${20+i*st}" cy="${22+j*st}" r="${(2+a*14)*grow}" fill="${C[Math.floor(b*5)]}" opacity="${(0.35+a*0.65)*(0.4+0.6*grow)}"/>`}
+document.getElementById('dots').innerHTML=o;
+</script></body></html>
